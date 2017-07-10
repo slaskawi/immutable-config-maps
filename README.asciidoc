@@ -1,0 +1,16 @@
+Immutable ConfigMaps
+====================
+
+1. `oc create -f cm.yaml`
+2. `oc create -f pod.yaml`
+3. `oc logs -f po/config-cmd-test-pod`
+4. Observe the output
+5. From other terminal window:
+6. `oc edit configmap/test-configmap`
+7. Save and notice the output from the first window is still the same.
+8. `oc delete po/config-cmd-test-pod`
+9. `oc create -f pod.yaml`
+10. `oc logs po/config-cmd-test-pod`
+11. Observe the modified output
+
+
